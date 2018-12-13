@@ -13,8 +13,8 @@ from sklearn.model_selection import train_test_split
 
 np.set_printoptions(threshold=np.nan)
 #load data
-data = np.load('finalAB.npy')
-labels = np.load('final_labelAB.npy')
+data = np.load('trainAll.npy')
+labels = np.load('trainYAll.npy')
 # new_arr=[]
 # for i in range(data.size):
 #     img = data[i]
@@ -95,7 +95,7 @@ model = CNN(input_dim = 2500, output_dim = 8)
 lossFunction = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01, weight_decay= 1e-6, momentum = 0.9,nesterov = False)
 
-epochs = 10
+epochs = 50
 
 epochval = []
 listTrainingLoss = []
