@@ -158,10 +158,10 @@ for epoch in range(epochs):
     acc.append(accuracy)
     lossy.append(val_loss)
      
-    print('In Epoch:{}, the training loss is {:.4f} and accuracy: {:.3f}%'.format(
-        epoch+1, 
-        Losstrain,
-        accuracy
-        ))
+    # print('In Epoch:{}, the training loss is {:.4f} and accuracy: {:.3f}%'.format(
+    #     epoch+1, 
+    #     Losstrain,
+    #     accuracy
+    #     ))
     epochval.append(epoch + 1)
 

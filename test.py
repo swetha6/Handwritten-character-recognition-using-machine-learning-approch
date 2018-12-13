@@ -30,15 +30,15 @@ if __name__ == '__main__':
     else:
         debug = False
     
-# new_arr=[]
-# for i in range(data.size):
-#     img = data[i]
-#     res = cv2.resize(img, dsize=(50, 50), interpolation=cv2.INTER_CUBIC)
-#     new_arr.append(res)
-# data=np.array(new_arr)
+new_arr=[]
+for i in range(data.size):
+    img = data[i]
+    res = cv2.resize(img, dsize=(50, 50), interpolation=cv2.INTER_CUBIC)
+    new_arr.append(res)
+data=np.array(new_arr)
 
-# data = np.array(data)
-# data = data.reshape(data.shape[0], data.shape[1]*data.shape[2])
+data = np.array(data)
+data = data.reshape(data.shape[0], data.shape[1]*data.shape[2])
 x_test = Variable(torch.from_numpy(data)).float()
 results = []
 model.eval() 
